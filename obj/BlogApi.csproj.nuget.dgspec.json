@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projetos\\blogapi\\BlogApi.csproj": {}
+    "D:\\Projetos\\CRUD-EF\\BlogApi.csproj": {}
   },
   "projects": {
-    "D:\\projetos\\blogapi\\BlogApi.csproj": {
+    "D:\\Projetos\\CRUD-EF\\BlogApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projetos\\blogapi\\BlogApi.csproj",
+        "projectUniqueName": "D:\\Projetos\\CRUD-EF\\BlogApi.csproj",
         "projectName": "BlogApi",
-        "projectPath": "D:\\projetos\\blogapi\\BlogApi.csproj",
+        "projectPath": "D:\\Projetos\\CRUD-EF\\BlogApi.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\projetos\\blogapi\\obj\\",
+        "outputPath": "D:\\Projetos\\CRUD-EF\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,6 +45,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.18, )"
+            },
             "Microsoft.EntityFrameworkcore.SQLserver": {
               "target": "Package",
               "version": "[7.0.13, )"
