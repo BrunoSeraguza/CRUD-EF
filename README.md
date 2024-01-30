@@ -1,6 +1,6 @@
-# CRUD-EF com JWT
+# CRUD-EF com JWT e Extensões de Classe
 
-Este é um projeto de exemplo que demonstra a implementação de um CRUD (Create, Read, Update, Delete) utilizando Entity Framework em uma aplicação .NET, com autenticação baseada em JWT (JSON Web Tokens).
+Este é um projeto de exemplo que demonstra a implementação de um CRUD (Create, Read, Update, Delete) utilizando Entity Framework em uma aplicação .NET, com autenticação baseada em JWT (JSON Web Tokens) e extensões de classe para funcionalidades adicionais.
 
 ## Requisitos
 
@@ -56,6 +56,7 @@ Este é um projeto de exemplo que demonstra a implementação de um CRUD (Create
 - **Update:** Modifica registros existentes.
 - **Delete:** Remove registros do banco de dados.
 - **Autenticação JWT:** Implementa autenticação baseada em JWT para proteger rotas e recursos sensíveis.
+- **Extensões de Classe:** Utiliza extensões de classe para organizar e reutilizar código de maneira eficiente.
 
 ## Contribuição
 
