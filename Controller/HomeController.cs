@@ -13,7 +13,7 @@ namespace blogapi.Controller
     {
         [HttpGet]
         public IActionResult Get()
-        => Ok( "certoo");
+        => Ok( "HOMOLOGACAO");
 
         [HttpPost]
         public IActionResult Post()

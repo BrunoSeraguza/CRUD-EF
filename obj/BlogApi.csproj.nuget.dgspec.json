@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projetos\\CRUD-EF\\BlogApi.csproj": {}
+    "d:\\Projetos\\CRUD-EF\\BlogApi.csproj": {}
   },
   "projects": {
-    "D:\\Projetos\\CRUD-EF\\BlogApi.csproj": {
+    "d:\\Projetos\\CRUD-EF\\BlogApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\CRUD-EF\\BlogApi.csproj",
+        "projectUniqueName": "d:\\Projetos\\CRUD-EF\\BlogApi.csproj",
         "projectName": "BlogApi",
-        "projectPath": "D:\\Projetos\\CRUD-EF\\BlogApi.csproj",
+        "projectPath": "d:\\Projetos\\CRUD-EF\\BlogApi.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\CRUD-EF\\obj\\",
+        "outputPath": "d:\\Projetos\\CRUD-EF\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -62,6 +62,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.13, )"
+            },
+            "SecureIdentity": {
+              "target": "Package",
+              "version": "[1.0.4, )"
             }
           },
           "imports": [

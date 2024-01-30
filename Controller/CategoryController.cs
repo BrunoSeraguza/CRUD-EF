@@ -118,6 +118,7 @@ namespace blogapi.Controller
        [HttpGet("v1/categories/")]
        public async Task<IActionResult> GetAsync([FromServices] BlogDataContext context)
        {
+       // User.Identity.IsAuthenticated;
         try{
           var categories = await context.Categories.ToListAsync();
 

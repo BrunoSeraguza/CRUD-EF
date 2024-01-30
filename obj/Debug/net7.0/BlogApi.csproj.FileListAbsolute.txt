@@ -139,3 +139,4 @@ D:\Projetos\CRUD-EF\obj\Debug\net7.0\refint\BlogApi.dll
 D:\Projetos\CRUD-EF\obj\Debug\net7.0\BlogApi.pdb
 D:\Projetos\CRUD-EF\obj\Debug\net7.0\BlogApi.genruntimeconfig.cache
 D:\Projetos\CRUD-EF\obj\Debug\net7.0\ref\BlogApi.dll
+D:\Projetos\CRUD-EF\bin\Debug\net7.0\SecureIdentity.dll

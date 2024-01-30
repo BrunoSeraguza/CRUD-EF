@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using Blog.Models;
@@ -13,7 +14,7 @@ namespace blogapi.Controller
 {
     public class TokenService
     {
-        public string GetToken(User user)
+        public string GenerateToken(User user)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
           
@@ -21,6 +22,13 @@ namespace blogapi.Controller
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Expires = DateTime.UtcNow.AddHours(3),
+                Subject = new ClaimsIdentity(new Claim[]
+                {
+                    new Claim("Fruta","banana"),
+                    new Claim(ClaimTypes.Role, "admin"),
+                    new Claim(ClaimTypes.Name, "Bruno Seraguza")
+
+                }),
                 SigningCredentials = new SigningCredentials
                 (
                     new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256

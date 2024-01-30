@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "X1WQkOB2Hyf8389gElNu0n8IX7hS7M/rX3Mle0YAjX70G6oBzTk6mAHT7F7Fa9/RAoZD1dMTKapuHCTMrZ2K+A==",
+  "dgSpecHash": "aQpJYTYKU0f7UprsUh//5EnoT8Ktf2VxMPImFut9A4D0j53hsA9lfc/WGhnyf+aCVBbMRKiCh8SnAgZe6kHTBQ==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\CRUD-EF\\BlogApi.csproj",
+  "projectFilePath": "d:\\Projetos\\CRUD-EF\\BlogApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
@@ -60,6 +60,7 @@
     "C:\\Users\\User\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\secureidentity\\1.0.4\\secureidentity.1.0.4.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.1\\system.configuration.configurationmanager.6.0.1.nupkg.sha512",
