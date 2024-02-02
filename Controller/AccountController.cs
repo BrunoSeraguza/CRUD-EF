@@ -27,7 +27,7 @@ namespace blogapi.Controller
             
         }
 
-        [HttpPost("v1/login")]
+        [HttpPost("v1/accounts")]
         public async Task<IActionResult> Post([FromBody] AccountViewModel model, [FromServices] BlogDataContext context )
         {
             if(!ModelState.IsValid)
@@ -36,10 +36,13 @@ namespace blogapi.Controller
                 var user = new User{
                     Name = model.Nome,
                     Email = model.Email,
-                    Slug = model.Email.Replace("@","-").Replace(".","-")
+                    Slug = model.Email.Replace("@","-").Replace(".","-"),
+                    Bio = "test",
+                    Image = "test"
+                 
                 };
 
-               var passowrd = PasswordGenerator.Generate();
+               var passowrd = PasswordGenerator.Generate(25);
                user.PasswordHash = PasswordHasher.Hash(passowrd);
 
                try{
@@ -49,9 +52,13 @@ namespace blogapi.Controller
                  return Ok(new ResultViewModel<dynamic>(new {
                     user = user.Email, passowrd
                  }));
-               } catch(DbUpdateException)
+               } catch(Exception ex)//DbUpdateException
                {
-                return StatusCode(500, new ResultViewModel<string>("Esse email ja esta cadastrado"));
+                // if (context.Users.Any(u => u.Email == model.Email))
+                // {
+                //      return StatusCode(500, new ResultViewModel<string>("Esse email já está cadastrado" ));
+                // } 
+                return StatusCode(500, new ResultViewModel<string>(ex.Message));
                }
                catch
                {
@@ -61,16 +68,16 @@ namespace blogapi.Controller
 
         }
 
-        [HttpPost("v1/account")]
+        [HttpPost("v1/accounts/login")]
         public async Task<IActionResult> Login([FromBody] LoginViewModel model, [FromServices] BlogDataContext context,[FromServices]TokenService token )
         {
             if(!ModelState.IsValid)
                 return BadRequest(new ResultViewModel<string>(ModelState.GetErrors()));
             
-            var user = await context.Users.AsNoTracking()
-            .Include(x => x.Roles).FirstOrDefaultAsync(x => x.Email == model.Email);
+            var user = await context.Users.AsNoTracking() // .Include(x => x.Roles)
+           .FirstOrDefaultAsync(x => x.Email == model.Email);
 
-            if(user is null)
+            if(user == null)
                 return StatusCode(401, new ResultViewModel<string>("Usuario ou senha invalidos"));
 
               if(!PasswordHasher.Verify(user.PasswordHash , model.Password) )  
@@ -82,9 +89,9 @@ namespace blogapi.Controller
           return Ok(new ResultViewModel<string>(hashToken,null));
 
         }
-        catch
+        catch(Exception ex)
         {
-            return StatusCode(500 , new ResultViewModel<string>("Erro interno do sistema"));
+            return StatusCode(500 , new ResultViewModel<string>($"Erro interno do sistema {ex.Message}"));
         }
         }
 
